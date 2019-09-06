@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trim Words</title>
+        <script>
+                function myFunction(){
+                var str = document.getElementById("string").value;
+                //var a = str.trim();
+                //var st = myTrim("str");
+                str = str.replace(/ +/g, "");
+                document.getElementById("output").innerHTML = str;
+                //alert(st);
+                }
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Remove Whitespaces</h1>
+        </div>
+        <div id="input_text">
+            <h3>Enter the text here</h3>
+            <input type="text" id="string">
+            <button onclick="myFunction()">Trim</button>
+        </div>
+        <div id="output"></div>
+    </body>
+</html>
