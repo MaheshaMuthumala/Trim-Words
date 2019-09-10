@@ -4,11 +4,11 @@
     text-align: center;
 }
 .input_text{
-    height: 40%;
+    white-space: 0;
     width: 100%;
     align-content: center;
 }
-.output{
+.outputString{
     height: 45%;
     width: 100%;
 }

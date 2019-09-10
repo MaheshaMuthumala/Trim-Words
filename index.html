@@ -13,24 +13,43 @@
         <script>
             function myFunction(){
             var str = document.getElementById("string").value;
-            str = str.replace(/ +/g, "");
-            document.getElementById("output").innerHTML = str;
+            var strLength = str.length;
+            var spaceCount = (str.split(" ").length - 1);
+            strTrimmed = str.replace(/ +/g, "");
+            document.getElementById("output").innerHTML = strTrimmed;
+            document.getElementById("length").innerHTML = strLength;
+            document.getElementById("whitespaces").innerHTML = spaceCount;
             }
         </script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <div class="container bg-info">
         <div id="header" class="jumbotron text-center">
             <h1>Remove Whitespaces</h1>
         </div>
-        <div id="input_text">
+        <div id="input_text" class="p-3 mb-2 bg-info text-white">
             <h3>Enter the text</h3><br>
             <input type="text" id="string" class="form-control"><br>
-            <button type="button" class="btn btn-primary btn-block" onclick="myFunction()">Trim</button>
+            <button type="button" class="btn btn-secondary btn-block" onclick="myFunction()">Trim</button>
         </div>
         <br>
-        <div id="output" class="d-flex justify-content-center">
-            <p id="output" class="text-success"></p>
+        <div id="outputString" class="d-flex justify-content-center p-3 mb-2 bg-info text-white">
+            <Table>
+                <tr>
+                    <td><p>String Length: &emsp;</p></td>
+                    <td><p id="length"></p></td>
+                </tr>
+                <tr>
+                    <td><p>Number of Whitespaces: &emsp;</p></td>
+                    <td><p id="whitespaces"></p></td>
+                </tr>
+                <tr>
+                    <td><p>Trimmed Word: &emsp;</p></td>
+                    <td><p id="output"></p></td>
+                </tr>
+            </Table>
+        </div>
         </div>
     </body>
 </html>
